@@ -1,59 +1,42 @@
-# MyAngularApp
+# Moment 4 – Angular II
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.0.5.
+Detta är en Angular-applikation som visar en lista med kurser för Webbutvecklingsprogrammet vid Mittuniversitetet. Projektet är utvecklat för kursmoment 4 och uppfyller krav på HTTP-anrop, services, datamodeller, sortering och filtrering i Angular.
 
-## Development server
+## Funktioner
 
-To start a local development server, run:
+- Hämtar kursdata från en lokal JSON-fil (`public/ramschema.json`) med hjälp av en Angular-service och HttpClient.
+- Visar kurserna i en tabell med kolumnerna kurskod, kursnamn och progression.
+- Sökfält för att filtrera kurser på kurskod eller kursnamn – uppdateras direkt när du skriver.
+- Möjlighet att sortera tabellen på kurskod, kursnamn och progression genom att klicka på tabellhuvudena.
+- Allt sker med Angulars data binding – sidan laddas aldrig om vid interaktion.
+- Grundläggande responsiv design med CSS.
 
-```bash
-ng serve
-```
+## Teknisk översikt
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+- **Framework:** Angular (med standalone-komponenter)
+- **Service:** En service (`course.service.ts`) för att hämta kursdata via HttpClient.
+- **Datamodell:** Ett interface (`course.model.ts`) beskriver kursobjektens struktur.
+- **Komponent:** Huvudkomponenten (`app.ts` och `app.html`) hanterar visning, sökning och sortering av kurser.
+- **Styling:** CSS i `app.css`
 
-## Code scaffolding
+## Så här kör du projektet
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+1. Klona repot och gå till projektmappen:
+   ```
+   git clone ...
+   cd moment4
+   ```
+2. Installera beroenden:
+   ```
+   npm install
+   ```
+3. Starta utvecklingsservern:
+   ```
+   ng serve
+   ```
+4. Öppna [http://localhost:4200](http://localhost:4200) i webbläsaren.
 
-```bash
-ng generate component component-name
-```
+---
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Av: Ellen Liden - elli1807@student.miun.se,
+VT25, DT208G
